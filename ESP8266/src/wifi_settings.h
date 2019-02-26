@@ -1,5 +1,5 @@
-#ifndef _WIFI_h
-#define _WIFI_h
+#ifndef _WATERIUS_WIFI_SETTINGS_h
+#define _WATERIUS_WIFI_SETTINGS_h
 
 #include "setup.h"
 

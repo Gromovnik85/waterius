@@ -17,12 +17,14 @@
 /*
     Включить отправку данных в приложение Blynk.cc
 */
-#define SEND_BLYNK
+//#define SEND_BLYNK
 
 /*
     Включить отправку данных на HTTP сервер
 */
-#define SEND_JSON
+//#define SEND_JSON
+
+#define SEND_HTTPS
 
 /*
     Уровень логирования
@@ -44,8 +46,8 @@
 
 #define I2C_SLAVE_ADDR 10  // i2c адрес Attiny85
 
-#define VER_4 4
-#define CURRENT_VERSION VER_4
+#define VER_5 5
+#define CURRENT_VERSION VER_5
 
 
 #define KEY_LEN 34
@@ -57,6 +59,7 @@
 
 #define HOSTNAME_JSON_LEN 64
 
+#define CERT_LEN 2000
 /*
 Настройки хранящиеся EEPROM
 */
@@ -111,6 +114,11 @@ struct Settings
     */
     float    channel0_previous;
     float    channel1_previous;
+
+    /*
+    Сертификат
+    */
+    char     ca[CERT_LEN];
 
     /*
     Зарезервируем кучу места, чтобы не писать конвертер конфигураций.

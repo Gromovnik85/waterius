@@ -1,5 +1,5 @@
-#ifndef _SETUPAP_h
-#define _SETUPAP_h
+#ifndef _WATERIUS_SETUP_AP_h
+#define _WATERIUS_SETUP_AP_h
 
 #include "setup.h"
 #include "master_i2c.h"

@@ -4,10 +4,11 @@ from __future__ import print_function  # для единого кода Python2,
 from werkzeug import serving
 import ssl
 from flask import Flask, request
+from flask import jsonify
 
 app = Flask(__name__)
 
-host = '192.168.1.10'
+host = '192.168.50.10'
 port = 5000
 
 """
@@ -46,7 +47,8 @@ def root():
         print(j['ch1'])
     except Exception as err:
         return "{}".format(err), 400
-    return 'OK'
+    d = {'status': 'OK'}
+    return jsonify(d)
 
 
 @app.route('/ping', methods=['GET'])
