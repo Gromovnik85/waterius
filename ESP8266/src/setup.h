@@ -5,6 +5,9 @@
 
 #define FIRMWARE_VERSION "0.5.4"
 
+#define DEBUG_ESP_HTTP_CLIENT
+#define DEBUG_ESP_PORT Serial
+
 /*
 Версии прошивки для ESP
 
